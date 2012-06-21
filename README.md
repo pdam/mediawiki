@@ -60,12 +60,12 @@ Develop   Cookbooks
 
 The mediawiki also   creates   cookbooks  for  the  sake   of  modularity  .Details   of  the    functions   of  various     cookbooks  are   there  in the  cookbook  README 
 
-yum
-git
-mysql
-apache2
-haproxy
-mediawiki
+	yum
+	git
+	mysql
+	apache2
+	haproxy
+	mediawiki
 
 Upload all the cookbooks to the Hosted Chef server   using the   command    knife cookbook upload -a
 
@@ -73,10 +73,10 @@ Server Roles
 =============
 All the required roles have been created in the mediawiki repository. They are in the roles/ directory.
 
-base.rb
-mediawiki_dbserver_master.rb
-mediawiki.rb
-mediawiki_load_balancer.rb
+	base.rb
+	mediawiki_dbserver_master.rb
+	mediawiki.rb
+	mediawiki_load_balancer.rb
 
 Upload all the roles to the Hosted Chef server.
 rake roles
@@ -86,8 +86,8 @@ Data Bag Item
 The mediawiki repository contains a data bag item that has all the information required to deploy and configure the MediaWiki mediaapp from source using the recipes in the mediaapp and dbserver cookbooks.
 The data bag name is apps and the item name is mediawiki. Upload this to the Hosted Chef server.
 
-knife data bag create apps
-knife data bag from file apps mediawiki.json
+	knife data bag create apps
+	knife data bag from file apps mediawiki.json
 
 
 Launch  Application
@@ -95,19 +95,19 @@ Launch  Application
 
 First, launch the dbserver instance.
 
-1. knife ec2 server create -G default -I ami-e565ba8c  -f m1.micro  -S mediawiki -i ~/.ssh/pratikdam.pem -x centos   -r 'role[base],role[mediawiki_dbserver_master]'
+	1. knife ec2 server create -G default -I ami-e565ba8c  -f m1.micro  -S mediawiki -i ~/.ssh/pratikdam.pem -x centos   -r 'role[base],role[mediawiki_dbserver_master]'
 
 Once the dbserver master is up, launch one node that will create the dbserver schema and set up the dbserver with default data.
 
-2. knife ec2 server create -G default -I  mi-e565ba8c   -f m1.micro  -S mediawiki -i ~/.ssh/pratikdam.pem -x centos  -r 'role[base],role[mediawiki],recipe[mediawiki::db_bootstrap]' 
+	2. knife ec2 server create -G default -I  mi-e565ba8c   -f m1.micro  -S mediawiki -i ~/.ssh/pratikdam.pem -x centos  -r 'role[base],role[mediawiki],recipe[mediawiki::db_bootstrap]' 
 
 Launch the second mediaapp instance w/o the mediawiki::db_bootstrap recipe.
 
-3. knife ec2 server create -G default -I ami-e565ba8c -f m1.micro  -S mediawiki -i ~/.ssh/pratikdam.pem -x centos   -r 'role[base],role[mediawiki]' 
+	3. knife ec2 server create -G default -I ami-e565ba8c -f m1.micro  -S mediawiki -i ~/.ssh/pratikdam.pem -x centos   -r 'role[base],role[mediawiki]' 
 
 Once the second mediaapp instance is up, launch the load balancer.
 
-4. knife ec2 server create -G default -I ami-e565ba8c -f m1.micro -S mediawiki -i ~/.ssh/pratikdam.pem -x centos  -r 'role[base],role[mediawiki_load_balancer]'
+	4. knife ec2 server create -G default -I ami-e565ba8c -f m1.micro -S mediawiki -i ~/.ssh/pratikdam.pem -x centos  -r 'role[base],role[mediawiki_load_balancer]'
 
 
 
