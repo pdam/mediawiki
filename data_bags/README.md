@@ -1,10 +1,7 @@
 This directory contains directories  and   JSON files for items that will go into that bag
-Steps 
-	mkdir data_bags/MEDIAWIKI_BAG
-	echo  " {
-		"id": "mediawiki"
-			}"  > data_bags/MEDIAWIKI_BAG/item.json  
 
+	mkdir data_bags/MEDIAWIKI_BAG
+	echo  " { 'id' : 'mediawiki' }"  >> data_bags/MEDIAWIKI_BAG/item.json  
 
 Create the data bag on the Chef Server and then upload  the  items 
      knife data bag create MEDIAWIKI_BAG
