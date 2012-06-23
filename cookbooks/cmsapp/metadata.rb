@@ -1,13 +1,13 @@
-maintainer       "Opscode, Inc."
-maintainer_email "cookbooks@opscode.com"
+maintainer       ""
+maintainer_email ""
 license          "Apache 2.0"
-description      "Deploys and configures a variety of applications defined from databag 'apps'"
+description      "Deploys and configures a variety of cmsapps defined from databag 'apps'"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.99.12"
-recipe           "application", "Loads application databags and selects recipes to use"
-recipe           "application::mod_php_apache2", "Sets up a deployed PHP application as a mod_php virtual host in Apache2"
-recipe           "application::php", "Deploys a PHP application specified in a data bag with the deploy_revision resource"
+version          "1.0.0"
+recipe           "cmsapp", "Loads cmsapp databags and selects recipes to use"
+recipe           "cmsapp::mod_php_apache2", "Sets up a deployed PHP cmsapp as a mod_php virtual host in Apache2"
+recipe           "cmsapp::php_pear_module_install", "Deploys a PHP cmsapp specified in a data bag with the deploy_revision resource"
 
-%w{ runit  apache2 php }.each do |cb|
+%w{ apache2 php_pear_module_install }.each do |cb|
   depends cb
 end
