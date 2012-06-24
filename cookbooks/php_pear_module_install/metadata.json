@@ -1,0 +1,29 @@
+{
+  "license": "All rights reserved",
+  "providing": {
+  },
+  "conflicting": {
+  },
+  "recommendations": {
+  },
+  "platforms": {
+  },
+  "maintainer_email": "YOUR_EMAIL",
+  "maintainer": "YOUR_COMPANY_NAME",
+  "name": "php_pear_module_install",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "replacing": {
+  },
+  "description": "Installs/Configures php_pear_module_install",
+  "attributes": {
+  },
+  "dependencies": {
+  },
+  "version": "0.0.1",
+  "suggestions": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n"
+}
