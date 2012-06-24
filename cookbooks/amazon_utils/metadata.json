@@ -1,0 +1,29 @@
+{
+  "maintainer": "YOUR_COMPANY_NAME",
+  "name": "amazon_utils",
+  "recipes": {
+  },
+  "recommendations": {
+  },
+  "groupings": {
+  },
+  "attributes": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "description": "Installs/Configures amazon_utils",
+  "suggestions": {
+  },
+  "replacing": {
+  },
+  "providing": {
+  },
+  "platforms": {
+  },
+  "license": "All rights reserved",
+  "maintainer_email": "YOUR_EMAIL",
+  "version": "0.0.1",
+  "conflicting": {
+  },
+  "dependencies": {
+  }
+}

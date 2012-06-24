@@ -1,0 +1,29 @@
+{
+  "maintainer": "YOUR_COMPANY_NAME",
+  "name": "lb_haproxy",
+  "recipes": {
+  },
+  "recommendations": {
+  },
+  "groupings": {
+  },
+  "attributes": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "description": "Installs/Configures lb_haproxy",
+  "suggestions": {
+  },
+  "replacing": {
+  },
+  "providing": {
+  },
+  "platforms": {
+  },
+  "license": "All rights reserved",
+  "maintainer_email": "YOUR_EMAIL",
+  "version": "0.0.1",
+  "conflicting": {
+  },
+  "dependencies": {
+  }
+}
