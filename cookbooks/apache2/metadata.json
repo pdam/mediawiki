@@ -481,8 +481,8 @@
     "arch": ">= 0.0.0"
   },
   "license": "Apache 2.0",
-  "maintainer_email": "cookbooks@opscode.com",
-  "version": "0.99.4",
+  "maintainer_email": "pdam@gail.com",
+  "version": "0.0.1",
   "conflicting": {
   },
   "dependencies": {
