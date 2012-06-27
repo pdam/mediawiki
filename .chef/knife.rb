@@ -4,7 +4,7 @@ log_location             STDOUT
 client_key               "#{current_dir}/mediawiki.pem"
 validation_client_name   "devp-validator"
 validation_key           "#{current_dir}/devp-validator.pem"
-chef_server_url          "https://10.28.32.95:4000"
+chef_server_url          "https://api.opscode.com/organizations/devp"
 cookbook_path            ["#{current_dir}/../cookbooks"]
 knife[:aws_access_key_id]=           "AKIAJJ4V2FMJOFQY52XQ"
 knife[:aws_secret_access_key]  =   "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"
